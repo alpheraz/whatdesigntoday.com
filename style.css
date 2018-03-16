@@ -180,11 +180,11 @@ h2 {
 .section {
     display:inline-block;
     top: 0px;
-    border: solid blue 4px;
+    border: solid yellow 4px;
 }
 
 div#section_0{
-    border: solid blue 3px;
+    border: solid yellow 3px;
     width: 90vw;
     padding:50px;
     display: block;
