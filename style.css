@@ -24,53 +24,6 @@ li :hover {
     
 }
 
-.setup {
-    color:transparent;
-    font-size: 4vw;
-    position: fixed;
-    font-family: "le-monde-livre-std", sans-serif;
-        -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white;
-     -webkit-animation: slide 15s linear infinite;
-  -moz-animation: slide 15s linear infinite;
-  -o-animation: slide 10s linear infinite;
-  animation: slide 15s linear infinite;
-    text-shadow: 0px 0px 39px #ffffff;
-    width: 50%;
-    height: 10%;
-
-}
-
-.setup_1 {
-    color:transparent;
-    font-size: 4vw;
-    left: 10vw;
-    position: fixed;
-    font-family: "le-monde-livre-std", sans-serif;
-        -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: white;
-     -webkit-animation: slide 14s linear infinite;
-  -moz-animation: slide 14s linear infinite;
-  -o-animation: slide 14s linear infinite;
-  animation: slide 14s linear infinite;
-    text-shadow: 0px 0px 39px #ffffff;
-    width: 50%;
-    height: 10%;
-
-}
-
-@keyframes slide {
-  0% {
-    left: 0;
-  }
-  50% {
-    left:1000px;
-  }
-  100% {
-    right: -100vw;
-  }
-}
-
 
 body {
     background-color: black;
@@ -169,7 +122,7 @@ h2 {
     color: black;
     left: 60%;
     z-index: 900;
-    overflow: show;
+    overflow: hidden;
     height: 50vw; 
 }
 
@@ -356,6 +309,13 @@ transition-delay: all 14s ease; /* delays for 1 second */
 }
 .frame figure:nth-child(5) { transform: translateY(80px ) translateX( -80px );
 }
+.frame figure:hover {
+    overflow: scroll;
+    
+    
+}
+
+
 
 .frame figure:nth-child(1) {
     background-color: blue;
