@@ -1,29 +1,5 @@
-@@ -1,569 +1,737 @@
 
 
-li {
-    display: block;
-    width: 50px;
-        font-family: "le-monde-livre-std";
-    display: inline-block;/* menu item as horizontal list;  display:block;  creates vertical lists */
-    color: black;
-    font-weight:600;
-    border: solid red;
-    margin: 10px;
-    text-decoration: none;
-}
-li a {
-    color:blue;
-        display: hidden;
-
-    text-decoration: line-through;
-} /* style links inside menu <li> */
-
-li :hover {
-        text-decoration: none;
-
-    
-}
 
 .setup {
     color:transparent;
@@ -40,6 +16,17 @@ li :hover {
     width: 50%;
     height: 10%;
 
+}
+
+
+
+#link {
+    text-decoration: none;
+    color: white;
+}
+
+#pimaceh {
+    color: white;
 }
 
 .setup_1 {
@@ -99,13 +86,32 @@ p {
     font-size: 5vw;
     margin: 0vw;
     text-align: left;
+    font-family: "le-monde-livre-std", "serif";
         -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: black;
     width: 20vw;
 }
 
+em { 
+    font-style: italic;
+}
+
+.hide {
+    display: none;
+    visibility: hidden;
+}
+
+.show {
+    
+}
+
+.switch {
+    
+    
+}
+
 h1 {
-    font-family:  "le-monde-livre-std";
+    font-family:"le-monde-livre-std";
     position: relative;
             -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
@@ -116,10 +122,10 @@ h2 {
     left: 0vw;
     font-size: 10vw;
     position: relative;
-    color:rgba( 255, 240, 81, 1 );
+    color:black;
     z-index: 100;
     margin: 0;
-    font-family: "quasimoda",sans-serif;
+    font-family: "le-monde-livre-std", "sans-serif";
 }
 
 #invisible-lives {
@@ -144,15 +150,14 @@ h2 {
 
 
 .frame {
-    border:solid yellow 4px;
     position: relative;
     display: block;
-    width: 30vw;
+    width: 20vw;
     z-index: 1000;
     height: 50vw; 
 }
 
-.container figure {
+.container_1 figure {
     position: relative;
     display: inline-grid;
     color: white;
@@ -161,15 +166,17 @@ h2 {
     
 }
 
+
+
+
 .frame figure {
        border:solid black 3px;
       position: absolute;
     display: inline-grid;
-    width: 30%;
+    width: 70vw;
     color: black;
     left: 60%;
-    z-index: 900;
-    overflow: show;
+    overflow: scroll;
     height: 50vw; 
 }
 
@@ -180,11 +187,9 @@ h2 {
 .section {
     display:inline-block;
     top: 0px;
-    border: solid blue 4px;
 }
 
 div#section_0{
-    border: solid blue 3px;
     width: 90vw;
     padding:50px;
     display: block;
@@ -192,13 +197,19 @@ div#section_0{
 
 div#section_1{
     color:yellow;
-    border: soplid aqua 3px;
+}
+
+#section2{
+}
+
+div#section3 {
+    display:inline-block;
+    top: 0px;
+    background-color: black;
 }
 
 
-
-
-.container {
+.container_1 {
     width: 100px;
     top: 0px;
     left: 0vw;
@@ -232,12 +243,17 @@ div#section_1{
 
 #carousel, figure {
     object-position: center;
+    color:white;
 }
 
-#carousel:active figure {
-    display: none;
+#carousel:active {
+    text-decoration: none;
+    color: white;
 }
 
+.activeNow {
+    position: a;
+}
 
 #carousel {
  -webkit-animation: rotatetobjectanim 10s linear infinite;
@@ -260,7 +276,7 @@ display: block;
 position: absolute;
 width: 10vw;
 height: 20vw;
-left: 20vw;
+left: 10vw;
 object-position: top;
 top: 73px;
 background-color: transparent;
@@ -279,11 +295,11 @@ text-align:  center;
 #circle {
     width: 520px;
     height: 520px;
-    left: 200px;
+    left: 20vw;
     top: -5vw;
     transform: rotate(40deg);
     border-radius: 30px;
-    position: relative;
+    position: fixed;
     display: block;
     border-radius: 100%;
     background: linear-gradient(-245deg,  #efff2d , #be4fc7, #462eff, #ff8080);
@@ -348,41 +364,56 @@ transition-delay: all 14s ease; /* delays for 1 second */
 
 .frame figure:nth-child(1) { transform: translateY(0px) translateX( 0px ) ;  
 }
-.frame figure:nth-child(2) { transform: translateY(20px) translateX( -20px );  
+.frame figure:nth-child(2) { transform: translateY(1em) translateX( 1em );  
 }
-.frame figure:nth-child(3) { transform: translateY( 40px) translateX( -40px ); 
+.frame figure:nth-child(3) { transform: translateY( 2em) translateX( 2em ); 
 }
-.frame figure:nth-child(4) { transform: translateY( 60px ) translateX( -60px ); 
+.frame figure:nth-child(4) { transform: translateY( 3em ) translateX(2em ); 
 }
-.frame figure:nth-child(5) { transform: translateY(80px ) translateX( -80px );
+.frame figure:nth-child(5) { transform: translateY(4em ) translateX( 4em );
 }
 
+
+
 .frame figure:nth-child(1) {
-    background-color: blue;
+    background-color: white;
+       overflow: scroll;
+    z-index: 70;
+
 }
 
 .frame figure:nth-child(2) {
-    background-color: aqua;
+    background-color: white;
+       overflow: hidden;
+    z-index: 60;
+
 }
 .frame figure:nth-child(3) {
     background-color: white;
+       overflow: hidden;
+        z-index: 50;
+
+
 }
 
 .frame figure:nth-child(4) {
     background-color: white;
-    overflow: scroll;
     padding: 20px;
     width:27%;
-    height: 3%;
+   overflow: hidden;
+            z-index: 40;
+
 }
 
 .frame figure:nth-child(5) {
     background-color: white;
     display: block;
-    margin: 30px;
-    width: 27%;
-    padding: 20px;
+            z-index: 30;
+
     text-align: left;
+       overflow: hidden;
+    
+
 }
 
 
@@ -570,7 +601,7 @@ animation: GradientChange 15s ease infinite;
 @CHARSET "ISO-8859-1";
 /* Reset CSS
  * --------------------------------------- */
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+body,div,dl,dt,dd,ol,h1,h2,h3,h4,h5,h6,pre,
 form,fieldset,input,textarea,p,blockquote,th,td {
     padding: 0;
     margin: 0;
@@ -587,8 +618,7 @@ html {
 }
 
 
-a{
-}
+
 table {
     border-spacing: 0;
 }
@@ -602,11 +632,7 @@ address,caption,cite,code,dfn,em,strong,th,var {
 strong{
 	font-weight: bold;
 }
-ol,ul {
-    list-style: none;
-    margin:0;
-    padding:0;
-}
+
 caption,th {
     text-align: left;
 
@@ -742,30 +768,7 @@ h3 {
 
 
 
-li {
-    display: block;
-    width: 50px;
-        font-family: "le-monde-livre-std";
-    display: inline-block;/* menu item as horizontal list;  display:block;  creates vertical lists */
-    color: white;
-    font-weight:600;
-    border: solid yellow 2px;
-    opacity: .2;
-    margin: 10px;
-    text-decoration: none;
-}
-li a {
-    color:blue;
-        display: hidden;
 
-    text-decoration: line-through;
-} /* style links inside menu <li> */
-
-li :hover {
-        text-decoration: none;
-
-    
-}
 
 
 body {
@@ -791,27 +794,37 @@ p {
 
 #landing_text {
      color: black;
-    font-size: 14vw;
+    font-size: 11vw;
     margin: 0vw;
+    left: 40vw;
     text-align: left;
     font-weight: 900;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: black;
     width: 20vw;
-    font-family: "serenity", "sans-serif";
+    font-family: "le-monde-livre-std", "sans-serif";
 
     
 }
 
+
+#statement {
+ left: 40vw;
+    width: 40vw;
+}
+
 #editorial_statement {
     color: black;
-    width: 40vw;
-    font-family:  "serenity", "sans-serif";
+    width: 30vw;
+    left: 60vw;
+    
+    font-family:  "le-monde-livre-std", "sans-serif";
     
 }
 
 #ip {
     font-size: 5vw;
+    left: 40vw;
     line-height: 10px;
 }
 
@@ -860,14 +873,14 @@ h2 {
     display: inline-block;
     width: 30vw;
     top: 3vw;
-    left: 60vw;
+    left: 50vw;
     z-index: 1000;
     height: 50vw; 
     padding-top: 20px;
     
 }
 
-.container figure {
+.container_1 figure {
     position: relative;
     display: inline-grid;
     color: white;
@@ -877,20 +890,78 @@ h2 {
 }
 
 .frame figure {
-    border:solid black 3px;
+    border:solid black 4px;
     position: absolute;
-    display: inline-grid;
-    width: 30vw;
+    display: block;
+    width: 35vw;
     padding: 1vw;
     color: black;
-    left: 0%;
-    height: 30vw;
-    overflow: scroll;
+    left: 10%;
+    height: 25vw;
+        margin: 3em;
+    width: 27%;
+    margin-bottom: 20em;
+    overflow: inherit;
 }
 
 .frame:hover {
     cursor: crosshair;
 }
+
+
+
+
+.frame figure:nth-child(1) {
+        width:100%;
+    padding-bottom: 2em;
+    background-color: white;
+        display: block;
+
+}
+
+
+.frame figure:nth-child(2) {
+    background-color: white;
+        width:100%;
+        display: block;
+        padding-bottom: 2em;
+
+
+}
+.frame figure:nth-child(3) {
+    background-color: white;
+        width:100%;
+        padding-bottom: 2em;
+
+        display: block;
+
+}
+
+.frame figure:nth-child(4) {
+    background-color: white;
+    width:100%;
+        display: block;
+        padding-bottom: 2em;
+
+
+}
+
+.frame figure:nth-child(5) {
+    background-color: white;
+    display: block;
+    width: 100%;
+        padding-bottom: 2em;
+
+}
+
+.stack {
+    font-family: "le-monde-livre-std";
+    line-height: 2em;
+    overflow: hidden;
+    
+}
+
+
 
 .section {
     display:inline-block;
@@ -901,7 +972,6 @@ h2 {
 
 #section0{
     display:inline-block;
-    border: solid blue 3px;
     padding:50px;
     background: white;
     display: block;
@@ -911,19 +981,17 @@ h2 {
     padding-left: 50px;
     font-size: 3vw;
     display:inline-block;
-    border: solid aqua 3px;
     background-color:#ffffff;
     display: block;
 }
 
 #section2 {
     display:inline-block;
-    background: red;
 }
 
 
 
-.container {
+.container_1 {
     width: 100px;
     top: 0px;
     left: 0vw;
@@ -959,9 +1027,7 @@ h2 {
     object-position: center;
 }
 
-#carousel:active figure {
-    display: none;
-}
+
 
 
 #carousel {
@@ -983,12 +1049,12 @@ h2 {
 margin: 0px;
 display: block;
 position: absolute;
-width: 11vw;
+width: 10vw;
 height: 19vw;
 left: 12vw;
     line-height: 25px;
 color: white;
-object-position: top;
+object-position: center;
 top: 73px;
 background-color: transparent;
 border:solid 2px white;
@@ -1001,14 +1067,25 @@ flex-flow: column-reverse;
 
 
 
+.circle_page {
+     width: 30vw;
+    height: 30vw;
+    left: 8vw;
+    top: 11vw;
+    position: absolute;
+      border-radius: 30px;
+       transform: rotate(40deg);
+    border: solid black 4px;
+        border-radius: 100%;
 
+}
 
 #circle {
-  width: 450px;
-    height: 450px;
-    left: 800px;
+  width: 30vw;
+    height: 30vw;
+    left: 12vw;
     top: 2vw;
-    cursor:none;
+    cursor:pointer;
     transform: rotate(40deg);
     border-radius: 30px;
     position: absolute;
@@ -1071,57 +1148,7 @@ transition-delay: all 14s ease; /* delays for 1 second */
 #carousel figure:nth-child(9) { transform: rotateY( 320deg ) translateZ(  300px); 
 }
 
-.frame figure:nth-child(1) { transform: translateY(0px) translateX( 0px ) ;  
-}
-.frame figure:nth-child(2) { transform: translateY(20px) translateX( -20px );  
-}
-.frame figure:nth-child(3) { transform: translateY( 40px) translateX( -40px ); 
-}
-.frame figure:nth-child(4) { transform: translateY( 60px ) translateX( -60px ); 
-}
-.frame figure:nth-child(5) { transform: translateY(80px ) translateX( -80px );
-}
-.frame figure:hover {
-    overflow: scroll;
-    
-    
-}
 
-
-
-.frame figure:nth-child(1) {
-        width:100%;
-    height: 80%;
-    background-color: white;
-}
-
-.frame figure:nth-child(2) {
-    background-color: white;
-        width:100%;
-    height: 80%;
-}
-.frame figure:nth-child(3) {
-    background-color: white;
-        width:100%;
-    height: 80%;
-}
-
-.frame figure:nth-child(4) {
-    background-color: white;
-    overflow: scroll;
-    width:100%;
-    height: 80%;
-}
-
-.frame figure:nth-child(5) {
-    background-color: white;
-    display: block;
-    margin: 30px;
-    width: 100%;
-    height: 80%;
-    padding: 20px;
-    text-align: left;
-}
 
 
 #carousel figure:nth-child(1) {
@@ -1293,10 +1320,6 @@ animation: GradientChange 15s ease infinite;
     transform: rotate3d(0,0,0,0deg);
   }
 }
-
-
-
-
 
 
 

@@ -2303,42 +2303,70 @@
         
         $( function() {
             
-       $( ".frame figure").draggable({stack : '.stack'})
-        $( ".container" ).draggable();
+       $( ".card").draggable({stack : '.stack'})
+        $('.frame figure').draggable({stack: '.stack'})
         $("#circle").perserve3d();
-
-            var all = document.selectElementsByTagName('.stack');
-            var prev = false;
-
-            for(i = 0; x < ALL.length; i++) {
-                all[i].onclick = function() {
-                    all[i].style.position = 'relative'; //necessary to use z-index
-                    if (prev) { prev.style.zIndex = 1; }
-                    this.style.zIndex = 1000;
-                    prev = this;
-}
-}
-
-        
-        } );    
+   } );  
         
         
         
         
+        var $card = $('.card');
+var lastCard = $(".card-list .card").length - 1;
 
-        // Changing color after scroll // 
-        var fixed_color = document.getElementById('#fixed_color');
-        window.onscroll = function () { 
-            if (document.body.scrollTop >= 100 ) {
-                myNav.classList.add("fixed_color");
-                myNav.classList.remove("after_color");
-            } 
-            else {
-                myNav.classList.add("fixed_color");
-                myNav.classList.remove("after_color");
-            }
-        };
+$('.next').click(function(){ 
+	var prependList = function() {
+		if( $('.card').hasClass('activeNow') ) {
+			var $slicedCard = $('.card').slice(lastCard).removeClass('transformThis activeNow');
+			$('ul').prepend($slicedCard);
+		}
+	}
+	$('li').last().removeClass('transformPrev').addClass('transformThis').prev().addClass('activeNow');
+	setTimeout(function(){prependList(); }, 150);
+});
 
+$('.prev').click(function() {
+	var appendToList = function() {
+		if( $('.card').hasClass('activeNow') ) {
+			var $slicedCard = $('.card').slice(0, 1).addClass('transformPrev');
+			$('.card-list').append($slicedCard);
+		}}
+	
+    
+    
+    
+			$('li').removeClass('transformPrev').last().addClass('activeNow').prevAll().removeClass('activeNow');
+	setTimeout(function(){appendToList();}, 150);
+});
+        
+        
+                var $card = $('.card-2');
+var lastCard = $(".card-list-2 .card-2").length - 1;
+
+$('.next').click(function(){ 
+	var prependList = function() {
+		if( $('.card-2').hasClass('activeNow') ) {
+			var $slicedCard = $('.card-2').slice(lastCard).removeClass('transformThis activeNow');
+			$('ul').prepend($slicedCard);
+		}
+	}
+	$('li').last().removeClass('transformPrev').addClass('transformThis').prev().addClass('activeNow');
+	setTimeout(function(){prependList(); }, 150);
+});
+
+$('.prev').click(function() {
+	var appendToList = function() {
+		if( $('.car2-w').hasClass('activeNow') ) {
+			var $slicedCard = $('.card-2').slice(0, 1).addClass('transformPrev');
+			$('.card-list-2').append($slicedCard);
+		}}
+	
+			$('li').removeClass('transformPrev').last().addClass('activeNow').prevAll().removeClass('activeNow');
+	setTimeout(function(){appendToList();}, 150);
+});
+
+        
+        
         
         
         

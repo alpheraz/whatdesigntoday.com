@@ -1,0 +1,225 @@
+
+
+@default-diff:  12px;
+@default-width: 100%;
+@default-min: 10%;
+
+.container {
+    width: 100%;
+    height: 10vw;
+    top: 2vw;
+    position: absolute;
+    margin-left: 35vw;
+    background-color: none;
+    padding: 50px 80px;
+}
+
+.container_2 {
+    width: 100%;
+    height: 10vw;
+    top: 2vw;
+    position: absolute;
+    margin-left: 35vw;
+    background-color: none;
+    padding: 50px 80px;
+}
+    
+    .card-stack {
+        width: 500px;
+        height: 250px;
+        position: absolute;
+        font-size: 10px;
+        margin: 30px auto;
+        opacity: 1;
+
+  .card-2 {
+       border:solid black 3px;
+      position: absolute;
+    display: inline-grid;
+    width: 40%;
+    color: black;
+    left: 60%;
+    overflow: show;
+    height: 50vw; 
+} 
+        
+        
+.card {
+       border:solid black 3px;
+      position: absolute;
+    display: inline-grid;
+    width: 40%;
+    color: black;
+    left: 60%;
+    overflow: show;
+    height: 50vw; 
+} 
+        
+        .buttons {
+
+            display:block;
+            position: absolute;
+            border: solid 2px black;
+            border-radius: 50%;
+        
+            top: 2vw;
+            color: rgba(255, 255, 255, 1);
+            text-align: center;
+            line-height: 35px;
+            text-decoration: none;
+            font-size: 22px;
+            z-index: 9000;
+            outline: none;
+            transition:all 0.2s ease;
+        }
+
+        .prev {
+            left: 5vw;  
+            width: 23vw;
+            height: 30vw;
+                        background-color: none;
+            border: solid white 0px;
+            cursor: w-resize;
+
+        }
+
+        .next {
+            cursor: e-resize;
+            left: 25vw;
+            background-color: none;
+            border: solid white 0px;
+                 width: 23vw;
+            height: 30vw;
+        }
+
+       
+        
+        .card-list {
+            width: 50vw;
+
+            li {
+                transition: all 100ms ease-in-out;
+                border-radius: 2px;
+                position: absolute;
+                list-style: none;
+                height: 300px;
+                right: 0;
+                  width: 35vw;
+                padding: 1vw;
+                color: black;
+                left: 10%;
+                transform-origin: bottom;
+                height: 25vw;
+                width: 27%;
+                margin-bottom: 20em;
+                z-index: 100;
+                font-family:  "le-monde-livre-std";
+                line-height: 30px;
+                font-size: 2em;
+                margin: 0 auto;
+                margin-bottom: 10px;
+                padding-top: 20px;
+                padding-right: 20px;
+                width:40vw;
+                overflow: scroll;
+                text-align: left;
+
+                &:nth-child(1) {
+                    top: (@default-diff * 2);
+                    z-index: 3000;
+                    background-color: white;
+                    transform: translateY(20px ) translateX( 20px );
+                    /* animation: scaleCard 100ms; */
+                }
+                &:nth-child(2) {
+                    top: (@default-diff * 3);
+                           z-index: 2000;
+                        transform: translateY(40px ) translateX( 40px );
+
+                }
+                &:nth-child(3) {
+                    top: (@default-diff * 4);
+                    z-index: 1500;
+                    transform: translateY(60px ) translateX( 60px );}
+                
+                &:nth-child(4) {
+                    top: (@default-diff * 5);
+                    z-index: 1000;
+                    transform: translateY(80px ) translateX( 80px );
+
+                }
+                &:nth-child(5) {
+                    top: (@default-diff * 6);
+                    z-index: 500;
+                transform: translateY(100px ) translateX( 100px );
+
+                }
+             &:nth-child(6) {
+                    top: (@default-diff * 7);
+                    z-index: 400;
+                transform: translateY(130px ) translateX( 10px );
+
+                }
+            }
+            
+        
+			
+				&:hover {
+				> .buttons.prev {
+					display: block;
+					animation: bounceInLeft 200ms; 
+				}
+
+				> .buttons.next {
+					display: block;
+					animation: bounceInRight 200ms; 
+				}
+			}
+    }
+}
+
+.transformThis {
+    animation: scaleDown 500ms;
+}
+
+.transformPrev {
+    animation: scaleUp 100ms;
+		display: none;
+}
+
+@keyframes scaleUp {
+    0% {transform: scale(1.2) translateY(50px); opacity: 0; }
+    20% {transform: scale(1.15) translateY(40px); opacity: 0.10;}
+    40% {transform: scale(1.10) translateY(30px); opacity: 0.20;}
+    60% {transform: scale(1.05) translateY(20px); opacity: 0.40;}
+    80% {transform: scale(1.01) translateY(10px); opacity: 0.80;}
+    100% {transform: scale(1) translateY(0); opacity: 1;}
+}
+
+@keyframes scaleDown {
+    0% {transform: scale(1) translateY(0); opacity: 1; }
+    20% {transform: scale(1.01) translateY(20px); opacity: 0.80;}
+    40% {transform: scale(1.05) translateY(40px); opacity: 0.40;}
+    60% {transform: scale(1.10) translateY(60px); opacity: 0.20;}
+    80% {transform: scale(1.15) translateY(80px); opacity: 0.10;}
+    100% {transform: scale(1.2) translateY(100px); opacity: 0;}
+}
+
+@keyframes scaleCard {
+    0%   {top:30px;}
+    100% {top:90px;}    
+}
+
+@keyframes bounceInLeft {
+  0% { opacity: 0; transform: translateX(40px); } 
+  // 60% { opacity: 1; transform: translateX(20px); } 
+  // 80% { transform: translateX(20px); } 
+  100% { transform: translateX(0); } 
+}
+
+@keyframes bounceInRight {
+  0% { opacity: 0; transform: translateX(-40px); } 
+  // 60% { opacity: 1; transform: translateX(-20px); } 
+  // 80% { transform: translateX(20px); } 
+  100% { transform: translateX(0); } 
+}

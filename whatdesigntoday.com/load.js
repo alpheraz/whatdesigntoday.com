@@ -43,41 +43,10 @@ function create_sections(content){
     return [sections, h1s]
 }
 
-function generate_toc(headings){
-    var menu = '' // start w/ empty menu
-    headings.each( function(h){ //for each heading
-	var el_id = $(this).attr('id'); //get its id
-	var el_text = $(this).text(); //get its text
-	var menu_item = '<li><a href="#' + el_id + '">' + el_text + '</a></li>' //build a <li> with <a> pointing to each <h1> in text 
-	menu = menu + menu_item;
-    });	
-    menu = '<ul>'+menu+'</ul>'; //wrap all <li>s inside <ul> </ul>
-//$('div#toc').html(menu); //insert menu before div#content
-//  return menu
-}
-   
-     $( function() {
-        $( ".container").draggable();
-        } );  
+ 
 
-$( function() {
-        $( ".frame figure").draggable();
-        } ); 
 
-    
-$ (function() {
-    
-    var b = document.getElementById(".container");
-var ctx = b.getContext("2d");
-    var bl = document.getElementsByClassName("figure")
-ctx.beginPath(bl);
-ctx.moveTo(onContextMenu, 0);
-ctx.lineTo(600, 150);
-ctx.stroke();
-}
-  
-  
-  )
+
 
 
 
@@ -97,7 +66,4 @@ $(document).ready(
     }
 )
 
-  $( function() {
-    $( "#circle" ).draggable();
-  } );
 
